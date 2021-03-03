@@ -1,6 +1,52 @@
 <?php
 $title = 'MILING CUTTERS - Unique Tools Solution';
 include('header.php');
+
+$products = [
+   'DEREK BULL DIA.25MM FOR RDMT10T3 TRS C25 5R25 200 2T',
+   'DEREK END MILL DIA.16MM FOR APKT11T3 ZAP C16 16 200 2T',
+   'DEREK HIGH FEED DIA.32MM FOR EPNW0603TN ASR C32 32 160 4T',
+   'DEREK HIGH FEED DIA.32MM FOR WDMW0805 SKS C32 32 200 2T',
+   'FEROTECH AOMT 123608PDTR PG30-MILLING INSERT 10 PCS',
+   'FEROTECH APKT 1003PDTR PG30 MILLING INSERT 10 PCS',
+   'FEROTECH APKT 1604PDTR PG30 MILLING INSERT 10 PCS',
+   'FEROTECH APMT 113508PDTR PG30-MILLING INSERT 10 PCS',
+   'FEROTECH ODMT 060508 PG30 MILLING INSERT 10 PCS',
+   'FEROTECH OFMT 05T308TN PG30 MILLING INSERT 10 PCS',
+   'FEROTECH RDKW 10T3MO PG25 MILLING INSERT 10 PCS',
+   'FEROTECH RDMT 1204MO PG30 MILLING INSERT 10 PCS',
+   'FEROTECH RDMW 1204MO PG30 MILLING INSERT 10 PCS',
+   'FEROTECH RPMT1204MOE JS PG20 MILLING INSERT 10 PCS',
+   'FEROTECH SEKT 1204AFTN PG30 MILLING INSERT 10 PCS',
+   'FEROTECH SEKT 12T3AGTN PG30 MILLING INSERT 10 PCS',
+   'FEROTECH TPKR 2204PDTR HS251 MILLING INSERT 10 PCS',
+   'FERTECH RPMT 08T2MO PG30 MILLING INSERT 10 PCS',
+   'HOLEX MODULAR VICE 300MM OPEN',
+   'JDMT1505 SHOULDER MILLING CUTTER',
+   'MICRON ER11 COLLETS',
+   'NICON HYDRAULIC MACHINE VICE 300MM OPEN',
+   'NICON LOCK DOWN JAW MACHINE VICE 205MM OPEN',
+   'NICON MODULAR VICE 160MM OPEN',
+   'RDMT10T3 INDEXABLE MILLING CUTTER',
+   'RPMW1003 ROUND INSERT FACE MILL',
+   'SMOXH END MILL DIA.25MM FOR ANGX1105 ST90 AN11 D25 W25 L150 Z02 H',
+   'SMOXH END MILL DIA.25MM FOR LNGX1205 ST90 LN12 D25 W25 L150 Z02',
+   'SMOXH END MILL DIA.25MM FOR RDMT1204 ST RD12 D25 W25 L150 Z02',
+   'SMOXH FACE MILL DIA.100MM FOR R245 12T3 TK45 SE12 D100 A32 Z07 H',
+   'SMOXH FACE MILL DIA.100MM FOR R290 12 TK90 R290.12 D100 A32 Z09 H',
+   'SMOXH FACE MILL DIA.50MM FOR LNGX1205 TK90 LN12 D50 A22 Z04',
+   'SMOXH FACE MILL DIA.63MM FOR LNGX1205 TK90 LN12 D63 A22 Z06 H',
+   'SMOXH FACE MILL DIA.80MM FOR SOMT12T3 TK90 SO12 D80 A27 Z07 H',
+   'SMOXH FACE MILL DIA.80MM FOR WNGU0806 TK90 WN08 D80 A27 Z07 H',
+   'SMOXH FACE MILL DIA.80MM FOR XNEX0806 TK90 XN08 D80 A27 Z07 H',
+   'SMOXH FACE MILL DIA.80MM FOR XOMX1806 TK90 XO18 D80 A27 Z07 H',
+   'SMOXH HIGH FEED DIA.16MM FOR JOMT06T2 HST JO06 D16 W16 L120 Z02 H',
+   'SMOXH HIGH FEED DIA.25MM FOR WNMX09T3 HST WN09T3 D25 W25 L150 Z02 H',
+   'SMOXH HIGH FEED DIA.32MM FOR JDMW09T3 HST JD09 D32 W32 L150 Z03 H',
+   'SMOXH HIGH FEED DIA.32MM FOR SDMT09T3 HST SD09T3 D32 W25 L150 Z03 H',
+   'SMOXH HIGH FEED FACE MILL DIA.50MM FOR JDMW09T3 HTK JD09 D50 A22 Z05 H',
+   'SMOXH HIGH FEED FACE MILL DIA.63MM FOR SDMT09T3 HTK SDMT09 D63 A22 Z06 H',
+];
 ?>
 
 
@@ -14,7 +60,7 @@ include('header.php');
          <div class="container">
             <h3>MILLING CUTTERS</h3>
             <ol class="breadcrumb">
-               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                <li class="breadcrumb-item"><a href="#">Our Products</a></li>
                <li class="breadcrumb-item active" aria-current="page">BORING SERIES</li>
             </ol>
@@ -26,86 +72,62 @@ include('header.php');
          <div class="gallery-section wow fadeInUp">
             <div class="container">
                <div class="row">
+                  <?php
+                     foreach ($products as $producttitle) {
+                         $product = str_replace(' ', '-', $producttitle); ?>
+                        <div class="col-md-3">
+                           <div class="image-col">
+                              <div class="image-thumb">
+                                 <a href="assets/images/our-products/milling-cutters/<?= $product ?>.jpg" data-fancybox="gallery" data-caption="<?= $producttitle ?>">
+                                    <img src="assets/images/our-products/milling-cutters/<?= $product ?>.jpg" alt="<?= $product ?>" />
+                                 </a>
+                              </div>
+                              <h6><?= $producttitle ?></h6>
+                           </div>
+                        </div>
+                     <?php
+                     }
+                  ?>
+                  <?php
+                  /*
+                  <!--
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-DC-Precision-Slim-Collet-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/ABH-Rough-Back-boring-Tool.jpg" alt="" />
+                           <a href="assets/images/our-products/milling-cutters/DEREK-BULL-DIA.25MM-FOR-RDMT10T3-TRS-C25-5R25-200-2T.jpg" data-fancybox="gallery" data-caption="DEREK-BULL-DIA.25MM-FOR-RDMT10T3-TRS-C25-5R25-200-2T">
+                              <img src="assets/images/our-products/milling-cutters/DEREK-BULL-DIA.25MM-FOR-RDMT10T3-TRS-C25-5R25-200-2T.jpg" alt="DEREK-BULL-DIA.25MM-FOR-RDMT10T3-TRS-C25-5R25-200-2T" />
                            </a>
                         </div>
-                        <h6>ABH Rough Back boring Tool</h6>
+                        <h6>DEREK BULL DIA.25MM FOR RDMT10T3 TRS C25 5R25 200 2T</h6>
                      </div>
                   </div>
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-DHP-Hydraulic-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/2.jpg" alt="" />
+                           <a href="assets/images/our-products/milling-cutters/DEREK-END-MILL-DIA.16MM-FOR-APKT11T3-ZAP-C16-16-200-2T.jpg" data-fancybox="gallery">
+                              <img src="assets/images/our-products/milling-cutters/DEREK-END-MILL-DIA.16MM-FOR-APKT11T3-ZAP-C16-16-200-2T.jpg" alt="DEREK-END-MILL-DIA.16MM-FOR-APKT11T3-ZAP-C16-16-200-2T" />
                            </a>
                         </div>
-                        <h6>ABH Rough Boring Tool</h6>
+                        <h6>DEREK END MILL DIA.16MM FOR APKT11T3 ZAP C16 16 200 2T</h6>
                      </div>
                   </div>
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-DHP-Super-Slim-Hydraulic-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-DHP-Super-Slim-Hydraulic-Chuck.jpg" alt="" />
+                           <a href="assets/images/our-products/milling-cutters/DEREK-HIGH-FEED-DIA.32MM-FOR-EPNW0603TN-ASR-C32-32-160-4T.jpg" data-fancybox="gallery" title="DEREK-HIGH-FEED-DIA.32MM-FOR-EPNW0603TN-ASR-C32-32-160-4T">
+                              <img src="assets/images/our-products/milling-cutters/DEREK-HIGH-FEED-DIA.32MM-FOR-EPNW0603TN-ASR-C32-32-160-4T.jpg" alt="DEREK-HIGH-FEED-DIA.32MM-FOR-EPNW0603TN-ASR-C32-32-160-4T">
                            </a>
                         </div>
-                        <h6>BT DHP Super Slim Hydraulic Chuck</h6>
+                        <h6>DEREK HIGH FEED DIA.32MM FOR EPNW0603TN ASR C32 32 160 4T</h6>
                      </div>
                   </div>
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-DSF-Shrink-Fit-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-DSF-Shrink-Fit-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT DSF Shrink Fit Holder</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-DSK-High-Precision-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-DSK-High-Precision-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT DSK High Precision Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-ER-Spring-Collet-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-ER-Spring-Collet-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT ER Spring Collet Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-FMA-BG-Face-Mill-Holder-With-Extra-Taper-Shank.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-FMA-BG-Face-Mill-Holder-With-Extra-Taper-Shank.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT FMA BG Face Mill Holder With Extra Taper Shank</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-FMA-Face-Mill-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-FMA-Face-Mill-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT FMA Face Mill Holder</h6>
+                        <a href="assets/images/our-products/milling-cutters/DEREK-HIGH-FEED-DIA.32MM-FOR-WDMW0805-SKS-C32-32-200-2T.jpg" data-fancybox="gallery" data-caption="DEREK-HIGH-FEED-DIA.32MM-FOR-WDMW0805-SKS-C32-32-200-2T">
+            <img src="assets/images/our-products/milling-cutters/DEREK-HIGH-FEED-DIA.32MM-FOR-WDMW0805-SKS-C32-32-200-2T.jpg" alt="DEREK-HIGH-FEED-DIA.32MM-FOR-WDMW0805-SKS-C32-32-200-2T">
+        </a></div>
+        <h6>DEREK HIGH FEED DIA.32MM FOR WDMW0805 SKS C32 32 200 2T</h6>
                      </div>
                   </div>
                </div>
@@ -113,201 +135,24 @@ include('header.php');
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-FMB-BG-Face-Mill-Holder-With-Extra-Taper-Shank.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-FMB-BG-Face-Mill-Holder-With-Extra-Taper-Shank.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT FMB BG Face Mill Holder With Extra Taper Shank</h6>
+                        <a href="assets/images/our-products/milling-cutters/FEROTECH-AOMT-123608PDTR-PG30-MILLING-INSERT-10-PCS.jpg" data-fancybox="gallery" data-caption="FEROTECH-AOMT-123608PDTR-PG30-MILLING-INSERT-10-PCS">
+            <img src="assets/images/our-products/milling-cutters/FEROTECH-AOMT-123608PDTR-PG30-MILLING-INSERT-10-PCS.jpg" alt="FEROTECH-AOMT-123608PDTR-PG30-MILLING-INSERT-10-PCS">
+        </a></div>
+        <h6>FEROTECH AOMT 123608PDTR PG30 MILLING INSERT 10 PCS</h6>
                      </div>
                   </div>
                   <div class="col-md-3">
                      <div class="image-col">
                         <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-FMB-Face-Mill-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-FMB-Face-Mill-Holder.jpg" alt="" />
-                           </a>
+                           <a href="assets/images/our-products/milling-cutters/SMOXH-HIGH-FEED-FACE-MILL-DIA.63MM-FOR-SDMT09T3-HTK-SDMT09-D63-A22-Z06-H.jpg" data-fancybox="gallery" data-caption="SMOXH-HIGH-FEED-FACE-MILL-DIA.63MM-FOR-SDMT09T3-HTK-SDMT09-D63-A22-Z06-H">
+                               <img src="assets/images/our-products/milling-cutters/SMOXH-HIGH-FEED-FACE-MILL-DIA.63MM-FOR-SDMT09T3-HTK-SDMT09-D63-A22-Z06-H.jpg" alt="SMOXH-HIGH-FEED-FACE-MILL-DIA.63MM-FOR-SDMT09T3-HTK-SDMT09-D63-A22-Z06-H">
+                             </a>
                         </div>
-                        <h6>BT FMB Face Mill Holder</h6>
+                          <h6>SMOXH HIGH FEED FACE MILL DIA.63MM FOR SDMT09T3 HTK SDMT09 D63 A22 Z06 H</h6>
                      </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-GSK-High-Precision-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-GSK-High-Precision-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT GSK High Precision Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-HPC-High-speed-Milling-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-HPC-High-speed-Milling-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT HPC High speed Milling Chuck</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-HPM-High-Speed-Milling-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-HPM-High-Speed-Milling-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT HPM High Speed Milling Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-MLC-Power-Chuck-Kit.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-MLC-Power-Chuck-Kit.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT MLC Power Chuck Kit</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-MLC-Power-Milling-Chuck-For-Heavy-Duty.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-MLC-Power-Milling-Chuck-For-Heavy-Duty.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT MLC Power Milling Chuck For Heavy Duty</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-MTA-Morse-Taper-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-MTA-Morse-Taper-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT MTA Morse Taper Holder</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-MTB-Morse-Taper-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-MTB-Morse-Taper-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT MTB Morse Taper Holder</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-SF-Shrink-Fit-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-SF-Shrink-Fit-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT SF Shrink Fit Holder</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-SLN-Side-lock-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-SLN-Side-lock-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT SLN Side lock Holder</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-SLO-Oil-feed-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-SLO-Oil-feed-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT SLO Oil feed Holder</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-SPU-Drill-Chuck-Holder.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-SPU-Drill-Chuck-Holder.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT SPU Drill Chuck Holder</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-TER-Tapping-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-TER-Tapping-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT TER Tapping Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-TPG-Rigid-Tapping-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-TPG-Rigid-Tapping-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT TPG Rigid Tapping Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-TPM-Tapping-Chuck-With-High-Rigidity.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/BT-TPM-Tapping-Chuck-With-High-Rigidity.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT TPM Tapping Chuck With High Rigidity</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/BT-VER-Tapping-Chuck.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/BT-VER-Tapping-Chuck.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>BT VER Tapping Chuck</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/CSO-Reducing-Sleeve.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/thumbs/CSO-Reducing-Sleeve.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>CSO Reducing Sleeve</h6>
-                     </div>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="image-col">
-                        <div class="image-thumb">
-                           <a href="assets/images/our-products/tool-holders/bt-chuck/PB-Oil-feed-Holder-Positioning-Block.jpg" data-fancybox="gallery">
-                              <img src="assets/images/our-products/tool-holders/bt-chuck/PB-Oil-feed-Holder-Positioning-Block.jpg" alt="" />
-                           </a>
-                        </div>
-                        <h6>PB Oil feed Holder Positioning Block</h6>
-                     </div>
-                  </div>
+                  </div>-->
+                  */
+                  ?>
                </div>
             </div>
          </div>
