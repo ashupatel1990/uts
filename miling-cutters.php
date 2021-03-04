@@ -53,7 +53,7 @@ $products = [
 	<div id="wrapper">
     <div class="overlay"></div>
 		<header id="header" class="header">
-       <?php include('menu.php'); ?>
+       <?php $menuactive = 'product'; include('menu.php'); ?>
       </header>
 
       <div class="page-title gray-bg">

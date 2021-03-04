@@ -1,12 +1,25 @@
 <?php
 $title = 'Micro Boring Kit | Special Purpose Tools | Locking Fixture for VMC | Unique Tools Solution - Ahmedabad';
 include('header.php');
+
+
+    $to = "ashish.undhad@drcsystems.com";
+    $subject = "My subject";
+    $txt = "Hello world!";
+    $headers = "From: qctypo@gmail.com" . "\r\n" .
+    "CC: somebodyelse@example.com";
+
+    mail($to, $subject, $txt, $headers);
+
 ?>
 
 	<div id="wrapper">
     <div class="overlay"></div>
 		<header id="header" class="header">
-			<?php include('menu.php'); ?>
+         <?php
+            $menuactive = 'home';
+            include('menu.php');
+         ?>
       </header>
       
       <div class="banner">
